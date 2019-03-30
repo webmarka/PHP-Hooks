@@ -1,6 +1,6 @@
 <?php
 /**
- * PHP Hooks Class
+ * PHP Hooks Class - Customized by webmarka for Mika.Solutions.
  *
  * The PHP Hooks Class is a fork of the WordPress filters hook system rolled in to a class to be ported 
  * into any php based system
@@ -8,7 +8,7 @@
  * This class is heavily based on the WordPress plugin API and most (if not all) of the code comes from there.
  * 
  * 
- * @version 0.1.3
+ * @version 0.1.3-mika
  * @copyright 2012 - 2014
  * @author Ohad Raz (email: admin@bainternet.info)
  * @link http://en.bainternet.info
@@ -24,11 +24,11 @@
  *
  * @package PHP Hooks
  */
-if (!class_exists('Hooks')){
+if (!class_exists('Mika_Hooks')){
   /**
   * Hooks
   */
-  class Hooks
+  class Mika_Hooks
   {
     /**
      * $filters holds list of hooks
@@ -559,6 +559,6 @@ if (!class_exists('Hooks')){
     }
   }//end class
 }//end if
-global $hooks;
-$hooks = new Hooks();
-$hooks->do_action('After_Hooks_Setup',$hooks);
+global $mika_hooks;
+$mika_hooks = new Mika_Hooks();
+$mika_hooks->do_action('After_Hooks_Setup',$mika_hooks);
