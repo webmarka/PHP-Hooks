@@ -24,11 +24,14 @@
  *
  * @package PHP Hooks
  */
-if (!class_exists('Mika_Hooks')){
+
+namespace wordpress;
+
+if (!class_exists('Hooks')){
   /**
   * Hooks
   */
-  class Mika_Hooks
+  class Hooks
   {
     /**
      * $filters holds list of hooks
@@ -559,6 +562,10 @@ if (!class_exists('Mika_Hooks')){
     }
   }//end class
 }//end if
-global $mika_hooks;
-$mika_hooks = new Mika_Hooks();
-$mika_hooks->do_action('After_Hooks_Setup',$mika_hooks);
+
+/*
+ * Example use : 
+ * global $mika_hooks;
+ * $mika_hooks = new Mika_Hooks();
+ * $mika_hooks->do_action('After_Hooks_Setup',$mika_hooks);
+*/
